@@ -12,7 +12,7 @@ namespace SCRM
         private string m_descr;
         private string m_name;
         private int m_idusers;
-
+        //sdfgsdfsdfsdfsdf
         public string Descr
         {
             get
