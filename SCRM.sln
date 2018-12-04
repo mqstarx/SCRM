@@ -9,7 +9,7 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CoreLib", "CoreLib\CoreLib.
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SCRMOperator", "SCRMOperator\SCRMOperator.csproj", "{60658A92-ABE2-4BFE-B122-21E2F898D2F2}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedControls", "InfoList\AdvancedControls.csproj", "{64DC70BC-C154-4CEC-9761-5DA1FC4C7CF2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "AdvancedControls", "AdvancedControls\AdvancedControls.csproj", "{64DC70BC-C154-4CEC-9761-5DA1FC4C7CF2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution

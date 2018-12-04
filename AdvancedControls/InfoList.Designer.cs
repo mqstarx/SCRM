@@ -1,4 +1,4 @@
-﻿namespace InfoList
+﻿namespace AdvancedControls
 {
     partial class InfoList
     {

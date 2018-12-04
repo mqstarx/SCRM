@@ -32,8 +32,6 @@
             this.userInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
             this.panel1 = new System.Windows.Forms.Panel();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.infoList2 = new InfoList.InfoList();
-            this.infoList1 = new InfoList.InfoList();
             this.button2 = new System.Windows.Forms.Button();
             this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
             this.button1 = new System.Windows.Forms.Button();
@@ -47,6 +45,8 @@
             this.label3 = new System.Windows.Forms.Label();
             this.label1 = new System.Windows.Forms.Label();
             this.label2 = new System.Windows.Forms.Label();
+            this.infoList1 = new AdvancedControls.InfoList();
+            this.infoList2 = new AdvancedControls.InfoList();
             ((System.ComponentModel.ISupportInitialize)(this.userInfoBindingSource)).BeginInit();
             this.panel1.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -71,6 +71,7 @@
             // 
             // groupBox1
             // 
+            this.groupBox1.Controls.Add(this.infoList1);
             this.groupBox1.Controls.Add(this.button2);
             this.groupBox1.Controls.Add(this.dateTimePicker1);
             this.groupBox1.Controls.Add(this.button1);
@@ -81,24 +82,6 @@
             this.groupBox1.Size = new System.Drawing.Size(620, 178);
             this.groupBox1.TabIndex = 2;
             this.groupBox1.TabStop = false;
-            // 
-            // infoList2
-            // 
-            this.infoList2.FontSize = 19;
-            this.infoList2.HeaderText = null;
-            this.infoList2.Location = new System.Drawing.Point(409, 396);
-            this.infoList2.Name = "infoList2";
-            this.infoList2.Size = new System.Drawing.Size(150, 76);
-            this.infoList2.TabIndex = 8;
-            // 
-            // infoList1
-            // 
-            this.infoList1.FontSize = 19;
-            this.infoList1.HeaderText = "Исполнители";
-            this.infoList1.Location = new System.Drawing.Point(409, 308);
-            this.infoList1.Name = "infoList1";
-            this.infoList1.Size = new System.Drawing.Size(150, 82);
-            this.infoList1.TabIndex = 7;
             // 
             // button2
             // 
@@ -222,12 +205,29 @@
             this.label2.Text = "Проработать вопрос и принять решение по таможенному оформлению при отгрузке издел" +
     "ия (Изготовление и выпуск СПС 64 «Экспресс-М» (для Узбекистана)).";
             // 
+            // infoList1
+            // 
+            this.infoList1.FontSize = 19;
+            this.infoList1.HeaderText = "Исполнители";
+            this.infoList1.Location = new System.Drawing.Point(15, 19);
+            this.infoList1.Name = "infoList1";
+            this.infoList1.Size = new System.Drawing.Size(150, 82);
+            this.infoList1.TabIndex = 7;
+            // 
+            // infoList2
+            // 
+            this.infoList2.FontSize = 19;
+            this.infoList2.HeaderText = null;
+            this.infoList2.Location = new System.Drawing.Point(409, 396);
+            this.infoList2.Name = "infoList2";
+            this.infoList2.Size = new System.Drawing.Size(150, 76);
+            this.infoList2.TabIndex = 8;
+            // 
             // TaskVivewControl
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.AutoScroll = true;
-            this.Controls.Add(this.infoList1);
             this.Controls.Add(this.infoList2);
             this.Controls.Add(this.panel1);
             this.Name = "TaskVivewControl";
@@ -259,7 +259,7 @@
         private System.Windows.Forms.DateTimePicker dateTimePicker1;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.TextBox textBox1;
-        private InfoList.InfoList infoList2;
-        private InfoList.InfoList infoList1;
+        private AdvancedControls.InfoList infoList2;
+        private AdvancedControls.InfoList infoList1;
     }
 }

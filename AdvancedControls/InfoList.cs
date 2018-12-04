@@ -8,7 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 
-namespace InfoList
+namespace AdvancedControls
 {
     public partial class InfoList: UserControl
     {

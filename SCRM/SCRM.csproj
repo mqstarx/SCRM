@@ -85,13 +85,13 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AdvancedControls\AdvancedControls.csproj">
+      <Project>{64dc70bc-c154-4cec-9761-5da1fc4c7cf2}</Project>
+      <Name>AdvancedControls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CoreLib\CoreLib.csproj">
       <Project>{3ed37fa6-3dc8-43b5-bfeb-8ca9e63cce7d}</Project>
       <Name>CoreLib</Name>
-    </ProjectReference>
-    <ProjectReference Include="..\InfoList\AdvancedControls.csproj">
-      <Project>{64dc70bc-c154-4cec-9761-5da1fc4c7cf2}</Project>
-      <Name>AdvancedControls</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

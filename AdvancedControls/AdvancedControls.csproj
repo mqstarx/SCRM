@@ -7,8 +7,8 @@
     <ProjectGuid>{64DC70BC-C154-4CEC-9761-5DA1FC4C7CF2}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>InfoList</RootNamespace>
-    <AssemblyName>InfoList</AssemblyName>
+    <RootNamespace>AdvancedControls</RootNamespace>
+    <AssemblyName>AdvancedControls</AssemblyName>
     <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
