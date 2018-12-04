@@ -84,7 +84,7 @@ namespace SCRM
         }
         private void MainForm_Shown(object sender, EventArgs e)
         {
-            string user_id = query("select id_user from users where secret='qwerty7';")[0][0].ToString();
+          /*  string user_id = query("select id_user from users where secret='qwerty7';")[0][0].ToString();
 
             List<object[]> jjj = query("select * from tasks where id_isp="+user_id + ";");
 
@@ -123,7 +123,7 @@ namespace SCRM
                 lvi.Tag = obj;
                     tasks_list.Items.Add(lvi);
                // }
-            }
+            }*/
 
         }
         private  byte[] SaveConfig(object obj, string filename)
@@ -144,7 +144,13 @@ namespace SCRM
 
         private void button1_Click(object sender, EventArgs e)
         {
-            insertquery();
+            // insertquery();
+
+            
+           
+           // infoList1.InfoStrings = arr;
+
+
         }
 
         private void button2_Click(object sender, EventArgs e)
