@@ -35,6 +35,7 @@
             this.columnHeader6 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
+            this.taskVivewControl1 = new AdvancedControls.TaskVivewControl();
             this.SuspendLayout();
             // 
             // tasks_list
@@ -93,11 +94,21 @@
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.button2_Click);
             // 
+            // taskVivewControl1
+            // 
+            this.taskVivewControl1.AutoScroll = true;
+            this.taskVivewControl1.Location = new System.Drawing.Point(157, 88);
+            this.taskVivewControl1.Name = "taskVivewControl1";
+            this.taskVivewControl1.Size = new System.Drawing.Size(924, 391);
+            this.taskVivewControl1.TabIndex = 3;
+            this.taskVivewControl1.TaskItems = null;
+            // 
             // MainForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1382, 533);
+            this.Controls.Add(this.taskVivewControl1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
             this.Controls.Add(this.tasks_list);
@@ -117,6 +128,7 @@
         private System.Windows.Forms.ColumnHeader columnHeader6;
         private System.Windows.Forms.Button button1;
         private System.Windows.Forms.Button button2;
+        private AdvancedControls.TaskVivewControl taskVivewControl1;
     }
 }
 

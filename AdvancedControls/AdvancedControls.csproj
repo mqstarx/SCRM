@@ -49,11 +49,23 @@
       <DependentUpon>InfoList.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="StaticInfo.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="StaticInfo.Designer.cs">
+      <DependentUpon>StaticInfo.cs</DependentUpon>
+    </Compile>
     <Compile Include="TaskViewControl.cs">
       <SubType>UserControl</SubType>
     </Compile>
     <Compile Include="TaskViewControl.Designer.cs">
       <DependentUpon>TaskViewControl.cs</DependentUpon>
+    </Compile>
+    <Compile Include="TaskViewItemIsp.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="TaskViewItemIsp.Designer.cs">
+      <DependentUpon>TaskViewItemIsp.cs</DependentUpon>
     </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
@@ -61,8 +73,14 @@
     <EmbeddedResource Include="InfoList.resx">
       <DependentUpon>InfoList.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="StaticInfo.resx">
+      <DependentUpon>StaticInfo.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="TaskViewControl.resx">
       <DependentUpon>TaskViewControl.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="TaskViewItemIsp.resx">
+      <DependentUpon>TaskViewItemIsp.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

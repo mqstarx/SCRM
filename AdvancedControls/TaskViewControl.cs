@@ -49,11 +49,11 @@ namespace AdvancedControls
         public TaskVivewControl()
         {
             InitializeComponent();
-            infoList1.AddString("Дата ррррр:ываываыввв ава dsfhfhfh", Color.Red, 12);
+           /* infoList1.AddString("Дата ррррр:ываываыввв ава dsfhfhfh", Color.Red, 12);
             infoList1.AddString("Дата ррррр:ываываывввава");
             infoList1.AddString("Дата ррррр:ываываывввава");
             infoList1.AddString("Дата ррррр:ываываывввава");
-            infoList1.AddString("Дата ррррр:ываываывввава");
+            infoList1.AddString("Дата ррррр:ываываывввава");*/
         }
 
         private void panel1_Paint(object sender, PaintEventArgs e)

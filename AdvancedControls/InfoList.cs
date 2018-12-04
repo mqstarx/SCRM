@@ -33,25 +33,7 @@ namespace AdvancedControls
                 return m_InfoStrings;
             }
 
-           /* set
-            {
-                m_InfoStrings = value;
-                if (value != null)
-                {
-                    for (int i = 0; i < m_InfoStrings.Count; i++)
-                    {
-                        Label lbl = new Label();
-                    
-                       
-                        lbl.AutoEllipsis = true;
-                        lbl.Location = new Point(1, i * 22);
-                        lbl.Text = m_InfoStrings[i];
-                        lbl.Width = panel.Width - 20;
-                        panel.Controls.Add(lbl);
-
-                    }
-                }
-            }*/
+          
         }
 
         public int FontSize
