@@ -40,6 +40,7 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="AgreementItem.cs" />
     <Compile Include="DepInfo.cs" />
     <Compile Include="enums.cs" />
     <Compile Include="TaskInfo.cs" />

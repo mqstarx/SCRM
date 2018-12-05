@@ -28,109 +28,124 @@
         /// </summary>
         private void InitializeComponent()
         {
-            this.dateTimePicker1 = new System.Windows.Forms.DateTimePicker();
-            this.button1 = new System.Windows.Forms.Button();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.components = new System.ComponentModel.Container();
+            this.dateTimePickerperenos = new System.Windows.Forms.DateTimePicker();
+            this.perenos_btn = new System.Windows.Forms.Button();
+            this.isp_comment = new System.Windows.Forms.TextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
-            this.button2 = new System.Windows.Forms.Button();
-            this.infoList2 = new AdvancedControls.InfoList();
-            this.infoList3 = new AdvancedControls.InfoList();
-            this.infoList1 = new AdvancedControls.InfoList();
-            this.staticInfo1 = new AdvancedControls.StaticInfo();
+            this.agreement_send_btn = new System.Windows.Forms.Button();
+            this.toolTipchat = new System.Windows.Forms.ToolTip(this.components);
+            this.messages_txb = new System.Windows.Forms.TextBox();
+            this.DatesList = new AdvancedControls.InfoList();
+            this.infoListUtv = new AdvancedControls.InfoList();
+            this.infoListSogl = new AdvancedControls.InfoList();
+            this.staticInfoTask = new AdvancedControls.StaticInfo();
             this.groupBox1.SuspendLayout();
             this.SuspendLayout();
             // 
-            // dateTimePicker1
+            // dateTimePickerperenos
             // 
-            this.dateTimePicker1.Location = new System.Drawing.Point(566, 105);
-            this.dateTimePicker1.Name = "dateTimePicker1";
-            this.dateTimePicker1.Size = new System.Drawing.Size(149, 20);
-            this.dateTimePicker1.TabIndex = 4;
+            this.dateTimePickerperenos.Location = new System.Drawing.Point(566, 105);
+            this.dateTimePickerperenos.Name = "dateTimePickerperenos";
+            this.dateTimePickerperenos.Size = new System.Drawing.Size(149, 20);
+            this.dateTimePickerperenos.TabIndex = 4;
             // 
-            // button1
+            // perenos_btn
             // 
-            this.button1.Location = new System.Drawing.Point(566, 130);
-            this.button1.Name = "button1";
-            this.button1.Size = new System.Drawing.Size(149, 23);
-            this.button1.TabIndex = 5;
-            this.button1.Text = "Запросить перенос срока";
-            this.button1.UseVisualStyleBackColor = true;
+            this.perenos_btn.Location = new System.Drawing.Point(566, 130);
+            this.perenos_btn.Name = "perenos_btn";
+            this.perenos_btn.Size = new System.Drawing.Size(149, 23);
+            this.perenos_btn.TabIndex = 5;
+            this.perenos_btn.Text = "Запросить перенос срока";
+            this.perenos_btn.UseVisualStyleBackColor = true;
+            this.perenos_btn.Click += new System.EventHandler(this.perenos_btn_Click);
             // 
-            // textBox1
+            // isp_comment
             // 
-            this.textBox1.Location = new System.Drawing.Point(6, 19);
-            this.textBox1.Multiline = true;
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(164, 92);
-            this.textBox1.TabIndex = 6;
+            this.isp_comment.Location = new System.Drawing.Point(6, 89);
+            this.isp_comment.Name = "isp_comment";
+            this.isp_comment.Size = new System.Drawing.Size(164, 20);
+            this.isp_comment.TabIndex = 6;
             // 
             // groupBox1
             // 
-            this.groupBox1.Controls.Add(this.textBox1);
+            this.groupBox1.Controls.Add(this.messages_txb);
+            this.groupBox1.Controls.Add(this.isp_comment);
             this.groupBox1.Location = new System.Drawing.Point(721, 8);
             this.groupBox1.Name = "groupBox1";
             this.groupBox1.Size = new System.Drawing.Size(176, 117);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
-            this.groupBox1.Text = "Комментарий";
+            this.groupBox1.Text = "Сообщения:";
             // 
-            // button2
+            // agreement_send_btn
             // 
-            this.button2.Location = new System.Drawing.Point(721, 130);
-            this.button2.Name = "button2";
-            this.button2.Size = new System.Drawing.Size(176, 23);
-            this.button2.TabIndex = 8;
-            this.button2.Text = "Отправить на согласование";
-            this.button2.UseVisualStyleBackColor = true;
+            this.agreement_send_btn.Location = new System.Drawing.Point(721, 130);
+            this.agreement_send_btn.Name = "agreement_send_btn";
+            this.agreement_send_btn.Size = new System.Drawing.Size(176, 23);
+            this.agreement_send_btn.TabIndex = 8;
+            this.agreement_send_btn.Text = "Отправить на согласование";
+            this.agreement_send_btn.UseVisualStyleBackColor = true;
+            this.agreement_send_btn.Click += new System.EventHandler(this.agreement_send_btn_Click);
             // 
-            // infoList2
+            // messages_txb
             // 
-            this.infoList2.BackColor = System.Drawing.Color.White;
-            this.infoList2.FontSize = 19;
-            this.infoList2.HeaderText = "Сроки";
-            this.infoList2.Location = new System.Drawing.Point(565, 0);
-            this.infoList2.Name = "infoList2";
-            this.infoList2.Size = new System.Drawing.Size(150, 96);
-            this.infoList2.TabIndex = 2;
+            this.messages_txb.Location = new System.Drawing.Point(7, 20);
+            this.messages_txb.Multiline = true;
+            this.messages_txb.Name = "messages_txb";
+            this.messages_txb.ReadOnly = true;
+            this.messages_txb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
+            this.messages_txb.Size = new System.Drawing.Size(163, 63);
+            this.messages_txb.TabIndex = 7;
             // 
-            // infoList3
+            // DatesList
             // 
-            this.infoList3.FontSize = 19;
-            this.infoList3.HeaderText = "Утверждающие";
-            this.infoList3.Location = new System.Drawing.Point(409, 83);
-            this.infoList3.Name = "infoList3";
-            this.infoList3.Size = new System.Drawing.Size(150, 69);
-            this.infoList3.TabIndex = 9;
+            this.DatesList.BackColor = System.Drawing.Color.White;
+            this.DatesList.FontSize = 9;
+            this.DatesList.HeaderText = "Сроки";
+            this.DatesList.Location = new System.Drawing.Point(565, 0);
+            this.DatesList.Name = "DatesList";
+            this.DatesList.Size = new System.Drawing.Size(150, 96);
+            this.DatesList.TabIndex = 2;
             // 
-            // infoList1
+            // infoListUtv
             // 
-            this.infoList1.FontSize = 19;
-            this.infoList1.HeaderText = "Согласующие";
-            this.infoList1.Location = new System.Drawing.Point(409, 0);
-            this.infoList1.Name = "infoList1";
-            this.infoList1.Size = new System.Drawing.Size(150, 77);
-            this.infoList1.TabIndex = 3;
+            this.infoListUtv.FontSize = 9;
+            this.infoListUtv.HeaderText = "Утверждающие";
+            this.infoListUtv.Location = new System.Drawing.Point(409, 74);
+            this.infoListUtv.Name = "infoListUtv";
+            this.infoListUtv.Size = new System.Drawing.Size(150, 78);
+            this.infoListUtv.TabIndex = 9;
             // 
-            // staticInfo1
+            // infoListSogl
             // 
-            this.staticInfo1.Location = new System.Drawing.Point(3, 3);
-            this.staticInfo1.Name = "staticInfo1";
-            this.staticInfo1.Size = new System.Drawing.Size(400, 151);
-            this.staticInfo1.TabIndex = 0;
+            this.infoListSogl.FontSize = 9;
+            this.infoListSogl.HeaderText = "Согласующие";
+            this.infoListSogl.Location = new System.Drawing.Point(409, 0);
+            this.infoListSogl.Name = "infoListSogl";
+            this.infoListSogl.Size = new System.Drawing.Size(150, 77);
+            this.infoListSogl.TabIndex = 3;
+            // 
+            // staticInfoTask
+            // 
+            this.staticInfoTask.Location = new System.Drawing.Point(3, 3);
+            this.staticInfoTask.Name = "staticInfoTask";
+            this.staticInfoTask.Size = new System.Drawing.Size(400, 151);
+            this.staticInfoTask.TabIndex = 0;
             // 
             // TaskViewItemIsp
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
-            this.Controls.Add(this.infoList2);
-            this.Controls.Add(this.infoList3);
-            this.Controls.Add(this.button2);
+            this.Controls.Add(this.DatesList);
+            this.Controls.Add(this.infoListUtv);
+            this.Controls.Add(this.agreement_send_btn);
             this.Controls.Add(this.groupBox1);
-            this.Controls.Add(this.button1);
-            this.Controls.Add(this.dateTimePicker1);
-            this.Controls.Add(this.infoList1);
-            this.Controls.Add(this.staticInfo1);
+            this.Controls.Add(this.perenos_btn);
+            this.Controls.Add(this.dateTimePickerperenos);
+            this.Controls.Add(this.infoListSogl);
+            this.Controls.Add(this.staticInfoTask);
             this.Name = "TaskViewItemIsp";
             this.Size = new System.Drawing.Size(900, 155);
             this.groupBox1.ResumeLayout(false);
@@ -141,14 +156,16 @@
 
         #endregion
 
-        private StaticInfo staticInfo1;
-        private InfoList infoList2;
-        private InfoList infoList1;
-        private System.Windows.Forms.DateTimePicker dateTimePicker1;
-        private System.Windows.Forms.Button button1;
-        private System.Windows.Forms.TextBox textBox1;
+        private StaticInfo staticInfoTask;
+        private InfoList DatesList;
+        private InfoList infoListSogl;
+        private System.Windows.Forms.Button perenos_btn;
         private System.Windows.Forms.GroupBox groupBox1;
-        private System.Windows.Forms.Button button2;
-        private InfoList infoList3;
+        private System.Windows.Forms.Button agreement_send_btn;
+        private InfoList infoListUtv;
+        public System.Windows.Forms.DateTimePicker dateTimePickerperenos;
+        public System.Windows.Forms.TextBox isp_comment;
+        private System.Windows.Forms.ToolTip toolTipchat;
+        private System.Windows.Forms.TextBox messages_txb;
     }
 }

@@ -9,9 +9,11 @@ namespace CoreLib
     public class DepInfo
     {
         private string m_Uid;
-        public DepInfo()
+        private string m_DepName;
+        public DepInfo(string name)
         {
             m_Uid = Guid.NewGuid().ToString();
+            m_DepName = name;
         }
 
         public string Uid
@@ -21,6 +23,19 @@ namespace CoreLib
                 return m_Uid;
             }
            
+        }
+
+        public string DepName
+        {
+            get
+            {
+                return m_DepName;
+            }
+
+            set
+            {
+                m_DepName = value;
+            }
         }
     }
 }

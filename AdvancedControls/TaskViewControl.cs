@@ -15,7 +15,8 @@ namespace AdvancedControls
     public partial class TaskVivewControl: UserControl
    {
         private List<TaskInfo> m_TaskItems;
-        private TaskInfo m_Task;
+       
+        private UserInfo m_CurrentUser;
 
         public List<TaskInfo> TaskItems
         {
@@ -26,44 +27,81 @@ namespace AdvancedControls
             set
             {
                 m_TaskItems = value;
-             /*   for(int i=0;i<m_TaskItems.Count;i++)
+
+                if (m_TaskItems != null && m_CurrentUser!=null)
                 {
-                    Panel panel_item = new Panel();
-                    panel_item.Width = 900;
-                    panel_item.Height = 160;
-                    panel_item.BackColor = Color.White;
+                    for (int i = 0; i < m_TaskItems.Count; i++)
+                    {
+                       //распределение задач по пользователям
+
+                        foreach(UserInfo usr in m_TaskItems[i].UserIspArray)
+                        {
+                            if(usr.Uid == m_CurrentUser.Uid)
+                            {
+
+                                TaskViewItemIsp tvisp = new TaskViewItemIsp();
+                                tvisp.Location = new Point(0,  (i * 170));
+                                tvisp.SendMsg += Tvisp_SendMsg;
+                                tvisp.SendOnSoglUtv += Tvisp_SendOnSoglUtv;
+                                tvisp.PerenosPressed += Tvisp_PerenosPressed;
+                                tvisp.CloseTask += Tvisp_CloseTask;
+                                tvisp.CurrentIsp = m_CurrentUser;
+                                tvisp.TaskInfo = m_TaskItems[i];
+
+                                this.Controls.Add(tvisp);
 
 
 
+                            }
+                        }
+                        
 
-
-
-                    //this.Controls.Add();
-
-                }*/
+                    }
+                }
             }
             
             
         }
 
+        private void Tvisp_CloseTask(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void Tvisp_PerenosPressed(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void Tvisp_SendOnSoglUtv(object sender, EventArgs e)
+        {
+            //throw new NotImplementedException();
+        }
+
+        private void Tvisp_SendMsg(object sender, EventArgs e)
+        {
+           // throw new NotImplementedException();
+        }
+
+        public UserInfo CurrentUser
+        {
+            get
+            {
+                return m_CurrentUser;
+            }
+
+            set
+            {
+                m_CurrentUser = value;
+            }
+        }
+
         public TaskVivewControl()
         {
             InitializeComponent();
-           /* infoList1.AddString("Дата ррррр:ываываыввв ава dsfhfhfh", Color.Red, 12);
-            infoList1.AddString("Дата ррррр:ываываывввава");
-            infoList1.AddString("Дата ррррр:ываываывввава");
-            infoList1.AddString("Дата ррррр:ываываывввава");
-            infoList1.AddString("Дата ррррр:ываываывввава");*/
+         
         }
 
-        private void panel1_Paint(object sender, PaintEventArgs e)
-        {
-
-        }
-
-        private void label8_Click(object sender, EventArgs e)
-        {
-
-        }
+     
     }
 }

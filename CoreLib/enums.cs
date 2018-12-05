@@ -8,7 +8,12 @@ namespace CoreLib
 {
    public enum TaskStatus {
 
-        InProgress, OnSogl,OnUtv,Closed
+        InProgress, OnSogl,OnSoglPerenos,OnUtv,Closed
+    }
+
+    public enum SoglStatus
+    {
+        None,Decline,Accept
     }
 
 }

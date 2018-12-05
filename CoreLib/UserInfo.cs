@@ -12,6 +12,7 @@ namespace CoreLib
         private string m_Name;
         private string m_PostName;
         private string m_DepUid;
+        private DepInfo m_Dep;
 
         public string Uid
         {
@@ -65,9 +66,27 @@ namespace CoreLib
             }
         }
 
-        public UserInfo()
+        public DepInfo Dep
         {
+            get
+            {
+                return m_Dep;
+            }
+
+            set
+            {
+                m_Dep = value;
+            }
+        }
+
+        public UserInfo(DepInfo dep,string name,string post_name)
+        {
+
             m_Uid = Guid.NewGuid().ToString();
+            m_Dep = dep;
+            m_Name = name;
+            m_PostName = post_name ;
+            m_DepUid = dep.Uid;
         }
 
       

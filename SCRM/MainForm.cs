@@ -11,6 +11,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using AdvancedControls;
+using CoreLib;
 
 namespace SCRM
 {
@@ -20,6 +21,7 @@ namespace SCRM
         public MainForm()
         {
             InitializeComponent();
+            //toolTip1.SetToolTip(label1, "asdfsdfsdf");
         }
 
         private List<object[]> query(string sql)
@@ -70,7 +72,7 @@ namespace SCRM
             command.Connection = conn;
             command.CommandText = "INSERT INTO testblob (file) VALUES (?databuff);";
 
-            byte[] databuff = SaveConfig(new TaskInfo(), "asd");
+            byte[] databuff = SaveConfig(new TaskInfo("","",DateTime.Now,DateTime.Now,null,null,null), "asd");
             MySqlParameter fileContentParameter = new MySqlParameter("?databuff", MySqlDbType.Blob, databuff.Length);
 
            
@@ -145,11 +147,32 @@ namespace SCRM
 
         private void button1_Click(object sender, EventArgs e)
         {
+
+            UserInfo usr = new UserInfo(new DepInfo("ОГК"), "Иванов Сергей Андреевич", "Инженер");
+
+            List<TaskInfo> task_array = new List<TaskInfo>();
+
+            List<UserInfo> arrUsr = new List<UserInfo>();
+            arrUsr.Add(usr);
+
+
+            TaskInfo testTask1 = new TaskInfo("Исполнить п. 6 протокола мероприятия \"Изготовление и выпуск СПС 64 «Экспресс - М»\"", "Проработать вопрос и принять решение по таможенному оформлению при отгрузке изделия (Изготовление и выпуск СПС 64 «Экспресс-М» (для Узбекистана)).", DateTime.Now, DateTime.Parse("23.12.2018"), arrUsr, arrUsr, arrUsr);
+
+            task_array.Add(testTask1);
+
+            task_array.Add(testTask1);
+            task_array.Add(testTask1);
+
+            task_array.Add(testTask1);
+
+            taskVivewControl1.CurrentUser = usr;
+            taskVivewControl1.TaskItems = task_array;
+
             // insertquery();
 
-            
-           
-           // infoList1.InfoStrings = arr;
+
+
+            // infoList1.InfoStrings = arr;
 
 
         }
@@ -164,6 +187,11 @@ namespace SCRM
             ms.Position = 0;
             BinaryFormatter bf = new BinaryFormatter();
             TaskInfo tas = (TaskInfo)bf.Deserialize(ms);
+        }
+
+        private void label1_MouseEnter(object sender, EventArgs e)
+        {
+
         }
     }
 }

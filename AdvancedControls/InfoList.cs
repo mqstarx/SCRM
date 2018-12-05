@@ -21,7 +21,7 @@ namespace AdvancedControls
         {
             
             InitializeComponent();
-            m_FontSize = 19;
+            m_FontSize = 9;
             m_InfoStrings = new List<string>();
             infoGroupbox.Text = m_HeaderText;
         }

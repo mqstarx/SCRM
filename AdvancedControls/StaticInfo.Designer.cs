@@ -95,8 +95,8 @@
         }
 
         #endregion
-        private System.Windows.Forms.TextBox text1;
-        private System.Windows.Forms.TextBox text2;
         private System.Windows.Forms.GroupBox groupBox1;
+        public System.Windows.Forms.TextBox text1;
+        public System.Windows.Forms.TextBox text2;
     }
 }
