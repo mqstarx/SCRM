@@ -45,14 +45,14 @@
             // 
             // dateTimePickerperenos
             // 
-            this.dateTimePickerperenos.Location = new System.Drawing.Point(566, 105);
+            this.dateTimePickerperenos.Location = new System.Drawing.Point(565, 148);
             this.dateTimePickerperenos.Name = "dateTimePickerperenos";
             this.dateTimePickerperenos.Size = new System.Drawing.Size(149, 20);
             this.dateTimePickerperenos.TabIndex = 4;
             // 
             // perenos_btn
             // 
-            this.perenos_btn.Location = new System.Drawing.Point(566, 130);
+            this.perenos_btn.Location = new System.Drawing.Point(565, 174);
             this.perenos_btn.Name = "perenos_btn";
             this.perenos_btn.Size = new System.Drawing.Size(149, 23);
             this.perenos_btn.TabIndex = 5;
@@ -62,25 +62,30 @@
             // 
             // isp_comment
             // 
-            this.isp_comment.Location = new System.Drawing.Point(6, 89);
+            this.isp_comment.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.isp_comment.Location = new System.Drawing.Point(7, 134);
             this.isp_comment.Name = "isp_comment";
-            this.isp_comment.Size = new System.Drawing.Size(164, 20);
+            this.isp_comment.Size = new System.Drawing.Size(163, 20);
             this.isp_comment.TabIndex = 6;
             // 
             // groupBox1
             // 
+            this.groupBox1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.messages_txb);
             this.groupBox1.Controls.Add(this.isp_comment);
             this.groupBox1.Location = new System.Drawing.Point(721, 8);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(176, 117);
+            this.groupBox1.Size = new System.Drawing.Size(176, 160);
             this.groupBox1.TabIndex = 7;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Сообщения:";
             // 
             // agreement_send_btn
             // 
-            this.agreement_send_btn.Location = new System.Drawing.Point(721, 130);
+            this.agreement_send_btn.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.agreement_send_btn.Location = new System.Drawing.Point(721, 174);
             this.agreement_send_btn.Name = "agreement_send_btn";
             this.agreement_send_btn.Size = new System.Drawing.Size(176, 23);
             this.agreement_send_btn.TabIndex = 8;
@@ -90,12 +95,14 @@
             // 
             // messages_txb
             // 
+            this.messages_txb.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.messages_txb.Location = new System.Drawing.Point(7, 20);
             this.messages_txb.Multiline = true;
             this.messages_txb.Name = "messages_txb";
             this.messages_txb.ReadOnly = true;
             this.messages_txb.ScrollBars = System.Windows.Forms.ScrollBars.Both;
-            this.messages_txb.Size = new System.Drawing.Size(163, 63);
+            this.messages_txb.Size = new System.Drawing.Size(163, 108);
             this.messages_txb.TabIndex = 7;
             // 
             // DatesList
@@ -105,16 +112,16 @@
             this.DatesList.HeaderText = "Сроки";
             this.DatesList.Location = new System.Drawing.Point(565, 0);
             this.DatesList.Name = "DatesList";
-            this.DatesList.Size = new System.Drawing.Size(150, 96);
+            this.DatesList.Size = new System.Drawing.Size(150, 142);
             this.DatesList.TabIndex = 2;
             // 
             // infoListUtv
             // 
             this.infoListUtv.FontSize = 9;
             this.infoListUtv.HeaderText = "Утверждающие";
-            this.infoListUtv.Location = new System.Drawing.Point(409, 74);
+            this.infoListUtv.Location = new System.Drawing.Point(409, 97);
             this.infoListUtv.Name = "infoListUtv";
-            this.infoListUtv.Size = new System.Drawing.Size(150, 78);
+            this.infoListUtv.Size = new System.Drawing.Size(150, 100);
             this.infoListUtv.TabIndex = 9;
             // 
             // infoListSogl
@@ -123,14 +130,14 @@
             this.infoListSogl.HeaderText = "Согласующие";
             this.infoListSogl.Location = new System.Drawing.Point(409, 0);
             this.infoListSogl.Name = "infoListSogl";
-            this.infoListSogl.Size = new System.Drawing.Size(150, 77);
+            this.infoListSogl.Size = new System.Drawing.Size(150, 96);
             this.infoListSogl.TabIndex = 3;
             // 
             // staticInfoTask
             // 
             this.staticInfoTask.Location = new System.Drawing.Point(3, 3);
             this.staticInfoTask.Name = "staticInfoTask";
-            this.staticInfoTask.Size = new System.Drawing.Size(400, 151);
+            this.staticInfoTask.Size = new System.Drawing.Size(400, 194);
             this.staticInfoTask.TabIndex = 0;
             // 
             // TaskViewItemIsp
@@ -146,8 +153,9 @@
             this.Controls.Add(this.dateTimePickerperenos);
             this.Controls.Add(this.infoListSogl);
             this.Controls.Add(this.staticInfoTask);
+            this.MinimumSize = new System.Drawing.Size(900, 0);
             this.Name = "TaskViewItemIsp";
-            this.Size = new System.Drawing.Size(900, 155);
+            this.Size = new System.Drawing.Size(900, 200);
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
             this.ResumeLayout(false);

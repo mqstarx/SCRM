@@ -40,15 +40,21 @@ namespace AdvancedControls
                             {
 
                                 TaskViewItemIsp tvisp = new TaskViewItemIsp();
-                                tvisp.Location = new Point(0,  (i * 170));
+                                tvisp.Location = new Point(0,  (i * 220));
                                 tvisp.SendMsg += Tvisp_SendMsg;
                                 tvisp.SendOnSoglUtv += Tvisp_SendOnSoglUtv;
                                 tvisp.PerenosPressed += Tvisp_PerenosPressed;
                                 tvisp.CloseTask += Tvisp_CloseTask;
                                 tvisp.CurrentIsp = m_CurrentUser;
                                 tvisp.TaskInfo = m_TaskItems[i];
-
-                                this.Controls.Add(tvisp);
+                                tvisp.Anchor = AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
+                                panel.Controls.Add(tvisp);
+                              /*  Panel pnl = new Panel();
+                                pnl.Location = new Point(0, 200 + (i * 220));
+                                pnl.Size = new Size(900, 20);
+                                pnl.BackColor = Color.Beige;
+                                pnl.Anchor= AnchorStyles.Left | AnchorStyles.Right | AnchorStyles.Top;
+                                panel.Controls.Add(pnl);*/
 
 
 

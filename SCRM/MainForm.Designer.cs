@@ -28,15 +28,16 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             this.button1 = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
-            this.toolTip1 = new System.Windows.Forms.ToolTip();
+            this.toolTip1 = new System.Windows.Forms.ToolTip(this.components);
             this.taskVivewControl1 = new AdvancedControls.TaskVivewControl();
             this.SuspendLayout();
             // 
             // button1
             // 
-            this.button1.Location = new System.Drawing.Point(1169, 90);
+            this.button1.Location = new System.Drawing.Point(926, 0);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(75, 23);
             this.button1.TabIndex = 1;
@@ -46,7 +47,7 @@
             // 
             // button2
             // 
-            this.button2.Location = new System.Drawing.Point(1169, 160);
+            this.button2.Location = new System.Drawing.Point(926, 29);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(75, 23);
             this.button2.TabIndex = 2;
@@ -61,11 +62,16 @@
             // 
             // taskVivewControl1
             // 
+            this.taskVivewControl1.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.taskVivewControl1.AutoScroll = true;
+            this.taskVivewControl1.BackColor = System.Drawing.Color.LightYellow;
             this.taskVivewControl1.CurrentUser = null;
-            this.taskVivewControl1.Location = new System.Drawing.Point(12, 12);
+            this.taskVivewControl1.Location = new System.Drawing.Point(0, 0);
+            this.taskVivewControl1.MinimumSize = new System.Drawing.Size(920, 0);
             this.taskVivewControl1.Name = "taskVivewControl1";
-            this.taskVivewControl1.Size = new System.Drawing.Size(960, 509);
+            this.taskVivewControl1.Size = new System.Drawing.Size(920, 481);
             this.taskVivewControl1.TabIndex = 3;
             this.taskVivewControl1.TaskItems = null;
             // 
@@ -73,10 +79,11 @@
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1382, 533);
+            this.ClientSize = new System.Drawing.Size(927, 481);
             this.Controls.Add(this.taskVivewControl1);
             this.Controls.Add(this.button2);
             this.Controls.Add(this.button1);
+            this.MinimumSize = new System.Drawing.Size(920, 0);
             this.Name = "MainForm";
             this.Text = "Автоматизированный контроль";
             this.Shown += new System.EventHandler(this.MainForm_Shown);

@@ -22,6 +22,7 @@ namespace SCRM
         {
             InitializeComponent();
             //toolTip1.SetToolTip(label1, "asdfsdfsdf");
+            Cfg.ReadConfig();
         }
 
         private List<object[]> query(string sql)
