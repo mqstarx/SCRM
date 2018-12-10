@@ -17,27 +17,20 @@ namespace SCRM
 {
     public partial class MainForm : Form
     {
-        private string m_secret = "qwerty7";
+        private Cfg m_Cfg;
         public MainForm()
         {
             InitializeComponent();
             //toolTip1.SetToolTip(label1, "asdfsdfsdf");
-            Cfg.ReadConfig();
+           m_Cfg = Cfg.ReadConfig();
+            if (m_Cfg == null)
+                this.Close();
         }
 
         private List<object[]> query(string sql)
         {
-            string serverName = "192.168.100.1"; // Адрес сервера (для локальной базы пишите "localhost")
-            string userName = "user"; // Имя пользователя
-            string dbName = "simple_crm"; //Имя базы данных
-            string port = "3306"; // Порт для подключения
-            string password = "qqww1122qqww"; // Пароль для подключения
-            string connStr = "server=" + serverName +
-                ";user=" + userName +
-                ";database=" + dbName +
-                ";port=" + port +
-                ";password=" + password + ";SslMode=none;Convert Zero Datetime=True";
-            MySqlConnection conn = new MySqlConnection(connStr);
+           
+            MySqlConnection conn = new MySqlConnection(m_Cfg.DbConnectionString);
             conn.Open();
             MySqlCommand sql_comm = new MySqlCommand(sql, conn);
 
@@ -57,17 +50,8 @@ namespace SCRM
         }
         private void insertquery()
         {
-            string serverName = "192.168.100.1"; // Адрес сервера (для локальной базы пишите "localhost")
-            string userName = "user"; // Имя пользователя
-            string dbName = "simple_crm"; //Имя базы данных
-            string port = "3306"; // Порт для подключения
-            string password = "qqww1122qqww"; // Пароль для подключения
-            string connStr = "server=" + serverName +
-                ";user=" + userName +
-                ";database=" + dbName +
-                ";port=" + port +
-                ";password=" + password + ";SslMode=none;Convert Zero Datetime=True";
-            MySqlConnection conn = new MySqlConnection(connStr);
+           
+            MySqlConnection conn = new MySqlConnection(m_Cfg.DbConnectionString);
            // conn.Open();
             MySqlCommand command = new MySqlCommand();
             command.Connection = conn;

@@ -81,6 +81,10 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\AdvancedControls\AdvancedControls.csproj">
+      <Project>{64DC70BC-C154-4CEC-9761-5DA1FC4C7CF2}</Project>
+      <Name>AdvancedControls</Name>
+    </ProjectReference>
     <ProjectReference Include="..\CoreLib\CoreLib.csproj">
       <Project>{3ed37fa6-3dc8-43b5-bfeb-8ca9e63cce7d}</Project>
       <Name>CoreLib</Name>

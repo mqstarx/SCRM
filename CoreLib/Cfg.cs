@@ -108,15 +108,45 @@ namespace CoreLib
             }
         }
 
+        public string DbConnectionString
+        {
+            get { return "server=" + m_DbServer + ";user=" + m_DbUser + ";database=" + m_DbName + ";port=" + m_DbPort + ";password=" + m_DbPassword + ";SslMode=none;Convert Zero Datetime=True";
+            }
+        }
         public  static Cfg ReadConfig()
         {
             try
             {
                 FileStream fs = new FileStream(Application.StartupPath + @"\" + "config.cfg", FileMode.Open, FileAccess.Read);
                 StreamReader sr = new StreamReader(fs);
-                string[] cfg_str = sr.ReadToEnd().Split('\n');
+                string[] cfg_str = sr.ReadToEnd().Split(new[] { "\r\n", "\r", "\n" }, StringSplitOptions.None);
 
-                return null;
+                string server_db = "";
+                string user_db = "";
+                string name_db = "";
+                string port_db = "";
+                string password_db = "";
+                string uid = "0";
+                   
+                foreach (string str in cfg_str)
+                {
+                    if (str.Split('=')[0] == "server_db")
+                        server_db = str.Split('=')[1];
+                    if (str.Split('=')[0] == "user_db")
+                        user_db = str.Split('=')[1];
+                    if (str.Split('=')[0] == "name_db")
+                        name_db = str.Split('=')[1];
+                    if (str.Split('=')[0] == "port_db")
+                        port_db = str.Split('=')[1];
+                    if (str.Split('=')[0] == "password_db")
+                        password_db = str.Split('=')[1];
+                    if (str.Split('=')[0] == "uid")
+                        uid = str.Split('=')[1];
+
+                }
+
+                fs.Close();
+                return new Cfg(server_db, port_db, user_db, password_db, name_db, uid);
 
 
 

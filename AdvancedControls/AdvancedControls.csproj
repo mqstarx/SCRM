@@ -42,6 +42,18 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="DepView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DepView.Designer.cs">
+      <DependentUpon>DepView.cs</DependentUpon>
+    </Compile>
+    <Compile Include="DepViewItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="DepViewItem.Designer.cs">
+      <DependentUpon>DepViewItem.cs</DependentUpon>
+    </Compile>
     <Compile Include="InfoList.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -49,6 +61,11 @@
       <DependentUpon>InfoList.cs</DependentUpon>
     </Compile>
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
     <Compile Include="StaticInfo.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -67,11 +84,27 @@
     <Compile Include="TaskViewItemIsp.Designer.cs">
       <DependentUpon>TaskViewItemIsp.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsersView.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsersView.Designer.cs">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="DepView.resx">
+      <DependentUpon>DepView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="DepViewItem.resx">
+      <DependentUpon>DepViewItem.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="InfoList.resx">
       <DependentUpon>InfoList.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Properties\Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
     <EmbeddedResource Include="StaticInfo.resx">
       <DependentUpon>StaticInfo.cs</DependentUpon>
@@ -82,12 +115,21 @@
     <EmbeddedResource Include="TaskViewItemIsp.resx">
       <DependentUpon>TaskViewItemIsp.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UsersView.resx">
+      <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\CoreLib\CoreLib.csproj">
       <Project>{3ed37fa6-3dc8-43b5-bfeb-8ca9e63cce7d}</Project>
       <Name>CoreLib</Name>
     </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\edit.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\del.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
