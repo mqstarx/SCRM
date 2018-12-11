@@ -35,8 +35,8 @@
             this.OtchetTab = new System.Windows.Forms.TabPage();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.refresh_btn = new System.Windows.Forms.Button();
-            this.depView = new AdvancedControls.DepView();
             this.userInfoBindingSource = new System.Windows.Forms.BindingSource(this.components);
+            this.depView = new AdvancedControls.DepView();
             this.tabControl1.SuspendLayout();
             this.users_tab.SuspendLayout();
             this.groupBox1.SuspendLayout();
@@ -93,8 +93,9 @@
             | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox1.Controls.Add(this.depView);
             this.groupBox1.Location = new System.Drawing.Point(6, 3);
+            this.groupBox1.MinimumSize = new System.Drawing.Size(250, 0);
             this.groupBox1.Name = "groupBox1";
-            this.groupBox1.Size = new System.Drawing.Size(418, 368);
+            this.groupBox1.Size = new System.Drawing.Size(259, 368);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
             this.groupBox1.Text = "Отделы";
@@ -109,21 +110,23 @@
             this.refresh_btn.UseVisualStyleBackColor = true;
             this.refresh_btn.Click += new System.EventHandler(this.refresh_btn_Click);
             // 
+            // userInfoBindingSource
+            // 
+            this.userInfoBindingSource.DataSource = typeof(CoreLib.UserInfo);
+            // 
             // depView
             // 
             this.depView.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.depView.DepList = null;
-            this.depView.Location = new System.Drawing.Point(6, 13);
+            this.depView.Location = new System.Drawing.Point(6, 19);
             this.depView.Name = "depView";
-            this.depView.Size = new System.Drawing.Size(400, 349);
+            this.depView.Size = new System.Drawing.Size(247, 343);
             this.depView.TabIndex = 0;
+            this.depView.DepNameChanged += new System.EventHandler(this.depView_DepNameChanged);
             this.depView.DepAdd += new System.EventHandler(this.depView_DepAdd);
-            // 
-            // userInfoBindingSource
-            // 
-            this.userInfoBindingSource.DataSource = typeof(CoreLib.UserInfo);
+            this.depView.DepDeleted += new System.EventHandler(this.depView_DepDeleted);
             // 
             // MainOperatorForm
             // 

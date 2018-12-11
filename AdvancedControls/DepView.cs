@@ -80,8 +80,9 @@ namespace AdvancedControls
                     break;
                 }
             }
-            this.DepList = m_DepList;
             panel.Controls.Clear();
+            this.DepList = m_DepList;
+            
            
 
         }

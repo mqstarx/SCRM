@@ -90,6 +90,12 @@
     <Compile Include="UsersView.Designer.cs">
       <DependentUpon>UsersView.cs</DependentUpon>
     </Compile>
+    <Compile Include="UsersViewItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UsersViewItem.Designer.cs">
+      <DependentUpon>UsersViewItem.cs</DependentUpon>
+    </Compile>
     <Service Include="{94E38DFF-614B-4cbd-B67C-F211BB35CE8B}" />
   </ItemGroup>
   <ItemGroup>
@@ -117,6 +123,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="UsersView.resx">
       <DependentUpon>UsersView.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UsersViewItem.resx">
+      <DependentUpon>UsersViewItem.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

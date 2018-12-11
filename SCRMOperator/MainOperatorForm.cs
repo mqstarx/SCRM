@@ -39,20 +39,33 @@ namespace SCRMOperator
 
         private void refresh_btn_Click(object sender, EventArgs e)
         {
-            List<object[]> obj_arr = DataBase.SelectQuery("select depInfo from departments;", m_Cfg.DbConnectionString);
+            List<object[]> obj_arr = DataBase.SelectQuery("select id, depInfo from departments;", m_Cfg.DbConnectionString);
             List<DepInfo> dep_list = new List<DepInfo>();
             foreach (object[] obj in obj_arr)
             {
                 MemoryStream ms = new MemoryStream();
 
-                ms.Write(((byte[])obj[0]), 0, ((byte[])obj[0]).Length);
+                ms.Write(((byte[])obj[1]), 0, ((byte[])obj[1]).Length);
                 ms.Position = 0;
                 BinaryFormatter bf = new BinaryFormatter();
                 DepInfo dep = (DepInfo)bf.Deserialize(ms);
+                dep.Id_InDb = (int)obj[0];
                 dep_list.Add(dep);
             }
             depView.DepList = dep_list;
 
+        }
+
+        private void depView_DepNameChanged(object sender, EventArgs e)
+        {
+            DataBase.UpdateDepQuery((DepInfo)sender, m_Cfg.DbConnectionString);
+            refresh_btn_Click(null, null);
+        }
+
+        private void depView_DepDeleted(object sender, EventArgs e)
+        {
+            DataBase.DeleteDepQuery((DepInfo)sender, m_Cfg.DbConnectionString);
+            refresh_btn_Click(null, null);
         }
     }
 }

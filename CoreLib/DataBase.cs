@@ -70,5 +70,51 @@ namespace CoreLib
 
             command.ExecuteNonQuery();
         }
+        public static void UpdateDepQuery(DepInfo depInfo, string connection_string)
+        {
+
+            MySqlConnection conn = new MySqlConnection(connection_string);
+            // conn.Open();
+            MySqlCommand command = new MySqlCommand();
+            command.Connection = conn;
+            command.CommandText = "UPDATE  departments set depInfo=?databuff where id="+depInfo.Id_InDb.ToString()+";";
+
+            byte[] databuff = ObjectToByteArray(depInfo);
+            MySqlParameter fileContentParameter = new MySqlParameter("?databuff", MySqlDbType.Blob, databuff.Length);
+
+
+            fileContentParameter.Value = databuff;
+
+
+            command.Parameters.Add(fileContentParameter);
+
+            conn.Open();
+
+            command.ExecuteNonQuery();
+        }
+        public static void DeleteDepQuery(DepInfo depInfo, string connection_string)
+        {
+
+            MySqlConnection conn = new MySqlConnection(connection_string);
+            // conn.Open();
+            MySqlCommand command = new MySqlCommand();
+            command.Connection = conn;
+            command.CommandText = "delete from departments where id=" + depInfo.Id_InDb.ToString() + ";";
+
+          //  byte[] databuff = ObjectToByteArray(depInfo);
+          //  MySqlParameter fileContentParameter = new MySqlParameter("?databuff", MySqlDbType.Blob, databuff.Length);
+
+
+           // fileContentParameter.Value = databuff;
+
+
+           // command.Parameters.Add(fileContentParameter);
+
+            conn.Open();
+
+            command.ExecuteNonQuery();
+        }
+
+
     }
 }

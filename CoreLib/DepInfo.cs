@@ -11,6 +11,8 @@ namespace CoreLib
     {
         private string m_Uid;
         private string m_DepName;
+        private int m_id_InDb=-1;
+    
         public DepInfo(string name)
         {
             m_Uid = Guid.NewGuid().ToString();
@@ -36,6 +38,19 @@ namespace CoreLib
             set
             {
                 m_DepName = value;
+            }
+        }
+
+        public int Id_InDb
+        {
+            get
+            {
+                return m_id_InDb;
+            }
+
+            set
+            {
+                m_id_InDb = value;
             }
         }
     }

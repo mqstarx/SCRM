@@ -48,6 +48,7 @@ namespace AdvancedControls
                 if (DepNameChanged != null)
                     DepNameChanged(m_Dep, null);
                 dep_name_txb.ReadOnly = true;
+                edit_btn.Enabled = false;
             }
         }
 
@@ -59,6 +60,7 @@ namespace AdvancedControls
         private void dep_name_txb_MouseDoubleClick(object sender, MouseEventArgs e)
         {
             dep_name_txb.ReadOnly = false;
+            edit_btn.Enabled = true;
         }
 
         private void del_dep_btn_Click(object sender, EventArgs e)
