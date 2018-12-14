@@ -88,11 +88,14 @@
             // dep_cmb
             // 
             this.dep_cmb.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.dep_cmb.DropDownStyle = System.Windows.Forms.ComboBoxStyle.DropDownList;
+            this.dep_cmb.Enabled = false;
             this.dep_cmb.FormattingEnabled = true;
             this.dep_cmb.Location = new System.Drawing.Point(604, 9);
             this.dep_cmb.Name = "dep_cmb";
             this.dep_cmb.Size = new System.Drawing.Size(174, 21);
             this.dep_cmb.TabIndex = 7;
+            this.dep_cmb.MouseDoubleClick += new System.Windows.Forms.MouseEventHandler(this.dep_cmb_MouseDoubleClick);
             // 
             // UsersViewItem
             // 

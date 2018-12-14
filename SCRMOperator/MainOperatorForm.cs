@@ -67,5 +67,10 @@ namespace SCRMOperator
             DataBase.DeleteDepQuery((DepInfo)sender, m_Cfg.DbConnectionString);
             refresh_btn_Click(null, null);
         }
+
+        private void depView1_Load(object sender, EventArgs e)
+        {
+
+        }
     }
 }

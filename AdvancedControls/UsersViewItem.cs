@@ -18,6 +18,9 @@ namespace AdvancedControls
 
         private UserInfo m_User;
 
+        private List<DepInfo> m_DepList;
+        
+
         public UserInfo User
         {
             get
@@ -30,6 +33,42 @@ namespace AdvancedControls
                 m_User = value;
                 usr_name_txb.Text = m_User.Name;
                 post_name_txb.Text = m_User.PostName;
+
+                if(m_DepList==null)
+                    dep_cmb.Items.Add(m_User.Dep);
+                
+            }
+        }
+
+        private void SetCmbSelected()
+        {
+            for(int i=0;i<dep_cmb.Items.Count;i++)
+            {
+                if (((DepInfo)dep_cmb.Items[i]).Uid == m_User.DepUid)
+                {
+                    dep_cmb.SelectedIndex = i;
+                    break;
+                }
+
+            }
+        }
+        public List<DepInfo> DepList
+        {
+            get
+            {
+                return m_DepList;
+            }
+
+            set
+            {
+                m_DepList = value;
+                if (m_DepList != null)
+                {
+                    dep_cmb.Items.AddRange(m_DepList.ToArray());
+                    SetCmbSelected();
+                }
+
+
             }
         }
 
@@ -44,10 +83,12 @@ namespace AdvancedControls
             {
                 m_User.Name = usr_name_txb.Text;
                 m_User.PostName = post_name_txb.Text;
+                m_User.Dep = (DepInfo)dep_cmb.SelectedItem;
                 if (UserInfoChanged != null)
                     UserInfoChanged(m_User, null);
                 usr_name_txb.ReadOnly = true;
                 post_name_txb.ReadOnly = true;
+                dep_cmb.Enabled = false;
                 edit_btn.Enabled = false;
             }
         }
@@ -56,6 +97,7 @@ namespace AdvancedControls
         {
             usr_name_txb.ReadOnly = false;
             post_name_txb.ReadOnly = false;
+            dep_cmb.Enabled = true;
             edit_btn.Enabled = true;
         }
 
@@ -73,6 +115,11 @@ namespace AdvancedControls
                     UserDeleted(this, null);
                 }
             }
+        }
+
+        private void dep_cmb_MouseDoubleClick(object sender, MouseEventArgs e)
+        {
+            post_name_txb_MouseDoubleClick(null, null);
         }
     }
 }

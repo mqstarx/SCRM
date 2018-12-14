@@ -53,5 +53,9 @@ namespace CoreLib
                 m_id_InDb = value;
             }
         }
+        public override string ToString()
+        {
+            return m_DepName;
+        }
     }
 }
